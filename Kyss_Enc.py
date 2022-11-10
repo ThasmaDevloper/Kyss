@@ -168,7 +168,7 @@ def enc_cipher():
                         flushKeys()
 
                     else:
-                        system('gpg --cipher-algo IDEA -c ' + file)
+                        system('gpg --allow-old-cipher-algos --cipher-algo IDEA -c ' + file)
                         flushKeys()
                     isSelected = True
                 case "2":
@@ -176,7 +176,7 @@ def enc_cipher():
                         system('gpg --allow-old-cipher-algos --cipher-algo 3DES -c ' + file)
                         flushKeys()
                     else:
-                        system('gpg --cipher-algo 3DES -c ' + file)
+                        system('gpg --allow-old-cipher-algos --cipher-algo 3DES -c ' + file)
                         flushKeys()
                     isSelected = True
                 case "3":
@@ -184,7 +184,7 @@ def enc_cipher():
                         system('gpg --allow-old-cipher-algos --cipher-algo CAST5 -c ' + file)
                         flushKeys()
                     else:
-                        system('gpg --cipher-algo CAST5 -c ' + file)
+                        system('gpg --allow-old-cipher-algos --cipher-algo CAST5 -c ' + file)
                         flushKeys()
                     isSelected = True
                 case "4":
@@ -192,7 +192,7 @@ def enc_cipher():
                         system('gpg --allow-old-cipher-algos --cipher-algo BLOWFISH -c ' + file)
                         flushKeys()
                     else:
-                        system('gpg --cipher-algo BLOWFISH -c ' + file)
+                        system('gpg --allow-old-cipher-algos --cipher-algo BLOWFISH -c ' + file)
                         flushKeys()
                     isSelected = True
                 case "5":
@@ -295,7 +295,7 @@ def enc_cipher():
                     system('gpg --allow-old-cipher-algo --cipher-algo IDEA -c ' + dir +".zip")
                     flushKeys()
                 else:
-                    system('gpg --cipher-algo IDEA -c ' + dir+".zip")
+                    system('gpg --allow-old-cipher-algos --cipher-algo IDEA -c ' + dir+".zip")
                     flushKeys()
                 isSelected = True
             case "2":
@@ -303,7 +303,7 @@ def enc_cipher():
                     system('gpg --allow-old-cipher-algo --cipher-algo 3DES -c ' + dir+".zip")
                     flushKeys()
                 else:
-                    system('gpg --cipher-algo 3DES -c ' + dir+".zip")
+                    system('gpg --allow-old-cipher-algos --cipher-algo 3DES -c ' + dir+".zip")
                     flushKeys()
                 isSelected = True
             case "3":
@@ -311,7 +311,7 @@ def enc_cipher():
                     system('gpg --allow-old-cipher-algo --cipher-algo CAST5 -c ' + dir+".zip")
                     flushKeys()
                 else:
-                    system('gpg --cipher-algo CAST5 -c ' + dir+".zip")
+                    system('gpg --allow-old-cipher-algos --cipher-algo CAST5 -c ' + dir+".zip")
                     flushKeys()
                 isSelected = True
             case "4":
@@ -319,7 +319,7 @@ def enc_cipher():
                     system('gpg --allow-old-cipher-algo --cipher-algo BLOWFISH -c ' + dir+".zip")
                     flushKeys()
                 else:
-                    system('gpg --cipher-algo BLOWFISH -c ' + dir+".zip")
+                    system('gpg --allow-old-cipher-algos --cipher-algo BLOWFISH -c ' + dir+".zip")
                     flushKeys()
                 isSelected = True
             case "5":
